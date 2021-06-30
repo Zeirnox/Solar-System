@@ -54,7 +54,7 @@ function addStar() {
 Array(200).fill().forEach(addStar)
 
 //background
-const spaceTexture = new THREE.TextureLoader().load('galaxy.png');
+const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
 //The Sun
