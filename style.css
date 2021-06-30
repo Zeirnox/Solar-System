@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+main {
+  width: 100vw;
+  width: 100%;
+  position: absolute;
+  color: aliceblue;
+  font-size: 2rem;
+  margin: 0px auto;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.sun {
+  grid-column: 2 / span 5;
+  padding-top: 150px;
+  margin-bottom: 350px;
+  text-align: justify;
+}
+
+.mercury {
+  grid-column: 2 / 8;
+  margin-bottom: 350px;
+}
+
+.section3 {
+  grid-column: 6 / 12;
+  margin-bottom: 350px;
+}
+
+.section4 {
+  grid-column: 2 / 6;
+  margin-bottom: 350px;
+}
