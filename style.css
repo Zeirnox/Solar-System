@@ -21,23 +21,49 @@ main {
 }
 
 .sun {
-  grid-column: 2 / span 5;
+  grid-column: 2 / span 6;
   padding-top: 150px;
-  margin-bottom: 350px;
+  margin-bottom: 250px;
+  margin-top: 150px;
   text-align: justify;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
 }
 
 .mercury {
+  grid-column: 7 / 12;
+  margin-bottom: 100px;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
+}
+
+.venus {
   grid-column: 2 / 8;
-  margin-bottom: 350px;
+  margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
 }
 
-.section3 {
-  grid-column: 6 / 12;
-  margin-bottom: 350px;
+.earth {
+  grid-column: 2 / 7;
+  margin-bottom: 450px;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
 }
 
-.section4 {
-  grid-column: 2 / 6;
-  margin-bottom: 350px;
+.mars {
+  grid-column: 5 / 12;
+  margin-bottom: 3500px;
+  margin-left: 250px;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
+  
+}
+
+.jupiter {
+  grid-column: 2/8;
+  margin-bottom: 3500px;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
 }
