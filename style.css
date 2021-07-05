@@ -54,7 +54,7 @@ main {
 
 .mars {
   grid-column: 5 / 12;
-  margin-bottom: 3500px;
+  margin-bottom: 5000px;
   margin-left: 250px;
   background-color: rgba(0, 0, 0, 0.705);
   padding: 50px;
@@ -62,7 +62,19 @@ main {
 }
 
 .jupiter {
-  grid-column: 2/8;
+  grid-column: 2/7;
+  margin-bottom: 2300px;
+  padding-right: 500px;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 50px;
+}
+
+.filler {
+  grid-column: 7 / 12;
+}
+
+.saturn {
+  grid-column: 7/12;
   margin-bottom: 3500px;
   background-color: rgba(0, 0, 0, 0.705);
   padding: 50px;
