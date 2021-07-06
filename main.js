@@ -32,12 +32,12 @@ renderer.render(scene, camera);
 //helpers
 //const lightHelper = new THREE.PointLightHelper(pointLight)
 const helper = new THREE.CameraHelper(camera);
-scene.add(helper);
+//scene.add(helper);
 
 const size = 10;
 const divisions = 10;
 const gridHelper = new THREE.GridHelper(size, divisions);
-scene.add(gridHelper);
+//scene.add(gridHelper);
 
 
 
@@ -227,7 +227,9 @@ function moveCamera() {
   //mercury.position.x += 0.05
   //venus.rotation.y += 0.03;
   earth.rotation.y += 0.03;
-  mars.rotation.y += 0.03
+  mars.rotation.y += 0.03;
+  jupiter.rotation.y += 0.02;
+  saturn.rotation.y += 0.03;
 
 
   camera.position.z = t * -0.05;
@@ -250,6 +252,8 @@ function animate() {
   venusAtmosphere.rotation.y += 0.001;
   earth.rotation.y += 0.001;
   mars.rotation.y += 0.001;
+  jupiter.rotation.y += 0.0008;
+  saturn.rotation.y += 0.001;
 
   window.addEventListener('resize', onWindowResize, false);
   //controls.update();
