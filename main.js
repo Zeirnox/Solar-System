@@ -54,9 +54,9 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 //stars
 function addStar() {
-  const geometry = new THREE.SphereGeometry(1, 24, 24);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff })
-  const star = new THREE.Mesh(geometry, material);
+  const starGeometry = new THREE.SphereGeometry(1, 24, 24);
+  const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff })
+  const star = new THREE.Mesh(starGeometry, starMaterial);
 
   const [x, y, z] = Array(3).fill().map(
     () => THREE.MathUtils.randFloatSpread(1000)
@@ -170,14 +170,13 @@ scene.add(jupiter);
 
 
 
-//
+/*
 function addbelt() {
   const geometry = new THREE.SphereGeometry(1, 24, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff })
   const astroid = new THREE.Mesh(geometry, material);
-
 }
-
+*/
 
 //Saturn
 
@@ -193,29 +192,62 @@ const saturn = new THREE.Mesh(
 saturn.position.set(-50, 0, 468);
 scene.add(saturn);
 
+
+
 //Saturn ring
 const saturnRingTexture = new THREE.TextureLoader().load('img/saturn_ring.png');
 
-const geometry = new THREE.RingBufferGeometry(60, 80, 50);
-var pos = geometry.attributes.position;
+const saturnGeometry = new THREE.RingBufferGeometry(60, 90, 80);
+var pos = saturnGeometry.attributes.position;
 var v3 = new THREE.Vector3();
 for (let i = 0; i < pos.count; i++) {
   v3.fromBufferAttribute(pos, i);
-  geometry.attributes.uv.setXY(i, v3.length() < 4 ? 0 : 1, 1);
+  saturnGeometry.attributes.uv.setXY(i, v3.length() < 61 ? 0 : 1, 1);
 }
 
-const material = new THREE.MeshBasicMaterial ({
+const saturnMaterial = new THREE.MeshBasicMaterial ({
   map: saturnRingTexture,
-  color: 0xffffff,
   side: THREE.DoubleSide,
+  transparent: true,
 })
 
-const saturnRing = new THREE.Mesh(geometry, material);
+const saturnRing = new THREE.Mesh(saturnGeometry, saturnMaterial);
 
-saturnRing.position.set(-50, 0, 468);
-//saturnRing.rotateX(8)
-//saturnRing.rotateY(0)
-//scene.add(saturnRing);
+saturnGeometry.uvsNeedUpdate = true;
+saturnRing.position.set(-40, 0, 468);
+saturnRing.rotateX(8)
+scene.add(saturnRing);
+
+
+
+//Uranus
+const uranusTexture = new THREE.TextureLoader().load('img/uranus.jpg');
+
+const uranus = new THREE.Mesh(
+  new THREE.SphereGeometry(31, 30, 30),
+  new THREE.MeshStandardMaterial({
+    map: uranusTexture,
+  })
+);
+
+uranus.position.set(40, 0, 720);
+scene.add(uranus);
+
+
+
+//Neptune
+const neptuneTexture = new THREE.TextureLoader().load('img/neptune.jpg');
+
+const neptune = new THREE.Mesh(
+  new THREE.SphereGeometry(30, 30, 30),
+  new THREE.MeshStandardMaterial({
+    map: neptuneTexture,
+  })
+);
+
+neptune.position.set(-30, 0, 900);
+scene.add(neptune);
+
 
 
 //scroll animation
