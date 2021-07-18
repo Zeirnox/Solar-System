@@ -105,7 +105,7 @@ scene.add(mercury);
 
 
 //Venus
-//const venusTexture = new THREE.TextureLoader().load('img/venus_surface.jpg');
+const venusTexture = new THREE.TextureLoader().load('img/venus_surface.jpg');
 const atmosphereTexture = new THREE.TextureLoader().load('img/venus_atmosphere.jpg');
 
 const venus = new THREE.Mesh (
