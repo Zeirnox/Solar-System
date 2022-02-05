@@ -19,7 +19,7 @@ jobs:
       
       - name: Install and build
         run: 
-          npm init @vitejs/app && npm install three && npm run dev
+          npm install && npm init @vitejs/app && npm install three && npm run dev
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.3
