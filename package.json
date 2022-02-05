@@ -17,7 +17,7 @@
     "three": "^0.129.0"
   },
   "description": "hosted on https://zeirnox.github.io/Solar-System/",
-  "main": "index.js",
+  "main": "main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zeirnox/Solar-System.git"
