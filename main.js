@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from "/orbitControls.js";
+import { OrbitControls } from "./orbitControls.js";
 
 
 //setup
